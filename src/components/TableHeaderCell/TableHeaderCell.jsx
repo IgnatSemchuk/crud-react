@@ -6,16 +6,20 @@ export const TableHeaderCell = (props) => {
   const {order, title} = props;
 
   let arrowUpClassName = classNames(
-    'fa',
-    'fa-sort-up',
+    'fa fa-sort-up',
     'table-header-cell__arrow',
     {
       'table-header-cell__arrow_active': order === 'asc'
-    });
+    }
+  );
 
-  let arrowDownClassName = classNames('fas fa-sort-down table-header-cell__arrow', {
+  let arrowDownClassName = classNames(
+    'fa fa-sort-down',
+    'table-header-cell__arrow',
+    {
     'table-header-cell__arrow_active': order === 'desc'
-  });
+    }
+  );
 
   return (
     <td>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import {Container} from 'react-bootstrap';
-import {Header} from "./components/Header";
+import {Header} from "./components/Header/Header";
 import {TableUsers} from "./components/TableUsers/TableUsers";
 import {AppBackend} from "./AppBackend";
 import {Footer} from "./components/Footer/Footer";
@@ -30,7 +30,7 @@ class App extends Component {
     });
   };
 
-  onSearchChange = async (value) => {
+  onSearchChange = async (event) => {
     const search = event.target.value;
 
     this.setState({search}, () => {
